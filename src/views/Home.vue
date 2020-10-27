@@ -3,7 +3,7 @@
         <img src="../assets/img/chili.svg" alt="Chilinotchilly logo" class="absolute top-0 w-2/4 rotate">
         <div class="container mx-auto md:px-12 mobile:px-10">
             <section class="flex content-center flex-wrap h-screen relative">
-                <h1 class="xl:text-xl lg:text-xl sm:text-lg mobile:text-xmd font-black leading-none mb-12 mobile:mb-4">{{ header }}</h1>
+                <h1 class="xl:text-xl lg:text-xl sm:text-lg mobile:text-lg font-black leading-none mb-12 mobile:mb-4">{{ header }}</h1>
                 <h2 class="md:text-md sm:text-xmd leading-normal">{{ copy_01 }}</h2>
             </section>
             <section class="relative workflow" data-aos="zoom-out" data-aos-anchor-placement="top-center">
