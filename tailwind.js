@@ -15,7 +15,8 @@ module.exports = {
       'base': '1rem',
       'md': '2rem',
       'lg': '4rem',
-      'xl': '12rem',
+      'xl': '8rem',
+      'xxl': '10rem',
     },
     container: {
       center: true,
@@ -25,6 +26,9 @@ module.exports = {
         'sans': ['Inter', 'sans-serif'],
         'display': ['Inter', 'sans-serif'],
         'body': ['Inter', 'sans-serif'],
+      },
+      screens: {
+        'mobile': [ {'max': '640px'} ]
       }
     },
   },

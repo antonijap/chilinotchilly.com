@@ -1,23 +1,23 @@
 <template>
     <div class="bg-mustard pb-20">
-        <div class="container mx-auto">
+        <div class="container mx-auto md:px-12 mobile:px-4">
             <section class="flex content-center flex-wrap h-screen">
-                <img src="../assets/img/chili.svg" alt="Chilinotchilly logo" class="mb-20 pl-12 rotate">
-                <h1 class="lg:text-xl lg:leading-none font-black mb-12">{{ header }}</h1>
-                <h2 class="lg:text-md lg:leading-normal">{{ copy_01 }}</h2>
+                <img src="../assets/img/chili.svg" alt="Chilinotchilly logo" class="mobile:w-12 mobile:mx-auto ml-12 mb-20 rotate">
+                <h1 class="xl:text-xxl lg:text-xl sm:text-lg mobile:text-md font-black leading-none mb-12 mobile:mb-4">{{ header }}</h1>
+                <h2 class="sm:text-md leading-normal">{{ copy_01 }}</h2>
             </section>
             <section>
-                <h3 class="lg:text-lg lg:leading-none mb-12">Our workflow</h3>
-                <p class="lg:text-md lg:leading-normal">We work as a team. A team that also includes you. This means less ping-ponging files, no waiting, and zero unnecessary bullshit. Just high-quality design. We are transparent, efficient, and always within your budget. And the best part — no industry jargon, we talk like humans.</p>
+                <h3 class="lg:text-lg leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Our workflow</h3>
+                <p class="sm:text-md leading-normal">{{ copy_02 }}</p>
             </section>
-            <section class="mt-64">
-                <h3 class="lg:text-lg lg:leading-none mb-12">Get in touch</h3>
-                <p class="lg:text-md lg:leading-normal mb-12">Every website is different. Some sites have more content, some are more complex. What matters is what you need. Chilinotchilly is your creative co-worker in the process. We will help you to determine what is relevant for your website. Once the right balance is found, it is time for action. The Chilinotchilly team is packed with skills to help you to get the right content done. From photos to copy, and all the way to product design and branding, we will help you to create exactly what you need to build your kickass website.</p>
-                <a href="mailto:hi@chilinotchilly.com" class="lg:text-lg lg:leading-normal underline">hi@chilinotchilly.com</a>
-                <img src="../assets/img/chili-team.jpg" class="my-40" alt="Chili team">
+            <section class="mt-64 mobile:mt-32">
+                <h3 class="lg:text-lg lg:leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Get in touch</h3>
+                <p class="sm:text-md leading-normal mb-12">{{ copy_03 }}</p>
+                <a href="mailto:hi@chilinotchilly.com" class="lg:text-lg sm:text-lg underline">hi@chilinotchilly.com</a>
+                <img src="../assets/img/chili-team.jpg" class="my-40 mobile:my-12" alt="Chili team">
             </section>
             <footer>
-                <p class="lg:text-md lg:leading-normal">Developed and designed by Chilinotchilly in Finland 🇫🇮</p>
+                <p class="sm:text-md leading-normal">Developed and designed by Chilinotchilly in Finland 🇫🇮</p>
             </footer>
         </div>
     </div>
@@ -37,6 +37,8 @@ export default {
         this.$prismic.client.getSingle('home').then((document) => {
             this.header = document.data.header[0].text,
             this.copy_01 = document.data.copy_01[0].text
+            this.copy_02 = document.data.copy_02[0].text
+            this.copy_03 = document.data.copy_03[0].text
         });
     }
   },
