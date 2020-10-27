@@ -11,17 +11,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: { name: 'home' }
+      redirect: Home
     },
     {
       path: '/not-found',
       name: 'not-found',
       component: NotFound
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: Home
     },
     {
       path: '*',
