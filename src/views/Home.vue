@@ -10,7 +10,7 @@
                 <h3 class="lg:text-lg leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Our workflow</h3>
                 <p class="md:text-md sm:text-xmd leading-normal">{{ copy_02 }}</p>
             </section>
-            <section class="contact mt-64 mobile:mt-32 relative" data-aos="fade-up" data-aos-easing="ease-out" data-aos-offset="200" data-aos-anchor-placement="center-bottom" data-aos-anchor=".workflow">
+            <section class="contact mt-64 mobile:mt-32 relative" data-aos="fade-up" data-aos-easing="ease-out" data-aos-offset="200">
                 <h3 class="lg:text-lg lg:leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Get in touch</h3>
                 <p class="md:text-md sm:text-xmd leading-normal mb-12">{{ copy_03 }}</p>
             </section>
