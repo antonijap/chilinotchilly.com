@@ -10,14 +10,14 @@
                 <h3 class="lg:text-lg leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Our workflow</h3>
                 <p class="md:text-md sm:text-xmd leading-normal">{{ copy_02 }}</p>
             </section>
-            <section id="contact" class="mt-64 mobile:mt-32 relative" data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="300" data-aos-anchor-placement="center-center">
+            <section id="contact" class="mt-64 mobile:mt-32 relative" data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="300" data-aos-anchor-placement="top-bottom">
                 <h3 class="lg:text-lg lg:leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Get in touch</h3>
                 <p class="md:text-md sm:text-xmd leading-normal mb-12">{{ copy_03 }}</p>
             </section>
-            <section data-aos="flip-up" data-aos-easing="ease-out" data-aos-delay="1000" data-aos-anchor-placement="center-center">
+            <section data-aos="flip-up" data-aos-easing="ease-out" data-aos-delay="1000" data-aos-anchor-placement="top-bottom">
                 <span class="lg:text-lg sm:text-lg">👉 </span><a href="mailto:hi@chilinotchilly.com" class="lg:text-lg sm:text-lg underline">hi@chilinotchilly.com</a>
             </section>
-            <img src="../assets/img/chili-team.png" class="mt-40 mobile:mt-12" alt="Chili team" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="1000" data-aos-anchor-placement="center-center">
+            <img src="../assets/img/chili-team.png" class="mt-40 mobile:mt-12" alt="Chili team" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="1000" data-aos-anchor-placement="bottom-center">
         </div>
     </div>
 </template>
