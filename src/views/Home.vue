@@ -1,7 +1,7 @@
 <template>
     <div class="bg-mustard pb-20">
         <img src="../assets/img/chili.svg" alt="Chilinotchilly logo" class="absolute top-0 w-2/4 rotate">
-        <div class="container mx-auto md:px-12 mobile:px-4">
+        <div class="container mx-auto md:px-12 mobile:px-10">
             <section class="flex content-center flex-wrap h-screen relative">
                 <h1 class="xl:text-xl lg:text-xl sm:text-lg mobile:text-md font-black leading-none mb-12 mobile:mb-4">{{ header }}</h1>
                 <h2 class="md:text-md sm:text-xmd leading-normal">{{ copy_01 }}</h2>
@@ -30,6 +30,8 @@ export default {
     return {
         header: null,
         copy_01: null,
+        copy_02: null,
+        copy_04: null,
     }
   },
   methods: {
@@ -50,7 +52,7 @@ export default {
 
 <style lang="scss">
 .rotate {
-  animation: rotation 10s infinite linear;
+  animation: rotation 60s infinite linear;
 }
 @keyframes rotation {
   from {
