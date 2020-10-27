@@ -5,16 +5,21 @@ import htmlSerializer from './prismic/html-serializer'
 import App from './App.vue'
 import router from './router'
 
-Vue.config.productionTip = false
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
+Vue.config.productionTip = false
 
 Vue.use(PrismicVue, {
   endpoint: "https://chilinotchilly.cdn.prismic.io/api/v2",
   linkResolver,
-  htmlSerializer
+  htmlSerializer,
 })
 
 new Vue({
+  created () {
+    AOS.init()
+  },
   router,
   render: h => h(App)
 }).$mount('#app')

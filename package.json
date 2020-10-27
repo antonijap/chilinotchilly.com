@@ -9,6 +9,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "prismic-dom": "^2.1.0",
     "prismic-vue": "^1.3.0",
     "tailwindcss": "^1.9.6",
