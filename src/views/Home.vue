@@ -31,7 +31,7 @@ export default {
         header: null,
         copy_01: null,
         copy_02: null,
-        copy_04: null,
+        copy_03: null,
     }
   },
   methods: {
