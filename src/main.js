@@ -4,11 +4,10 @@ import linkResolver from './prismic/link-resolver'
 import htmlSerializer from './prismic/html-serializer'
 import App from './App.vue'
 import router from './router'
-
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import VueScrollReveal from 'vue-scroll-reveal';
 
 Vue.config.productionTip = false
+Vue.use(VueScrollReveal);
 
 Vue.use(PrismicVue, {
   endpoint: "https://chilinotchilly.cdn.prismic.io/api/v2",
@@ -17,9 +16,6 @@ Vue.use(PrismicVue, {
 })
 
 new Vue({
-  created () {
-    AOS.init()
-  },
   router,
   render: h => h(App)
 }).$mount('#app')

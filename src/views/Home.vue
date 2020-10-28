@@ -6,18 +6,18 @@
                 <h1 class="xl:text-xl lg:text-xl sm:text-lg mobile:text-xlg font-black leading-none mb-12 mobile:mb-4">{{ header }}</h1>
                 <h2 class="md:text-md sm:text-xmd leading-normal">{{ copy_01 }}</h2>
             </section>
-            <section class="relative workflow" data-aos="zoom-out">
+            <section class="relative" v-scroll-reveal.reset="{ scale: 1.2, delay: 250, duration: 800, distance: '100px' }">
                 <h3 class="lg:text-lg leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Our workflow</h3>
                 <p class="md:text-md sm:text-xmd leading-normal">{{ copy_02 }}</p>
             </section>
-            <section class="contact mt-64 mobile:mt-32 relative" data-aos="zoom-out">
+            <section class="mt-64 mobile:mt-32 relative" v-scroll-reveal.reset="{ scale: 1.2, delay: 250, duration: 800, distance: '100px' }">
                 <h3 class="lg:text-lg lg:leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Get in touch</h3>
                 <p class="md:text-md sm:text-xmd leading-normal mb-12">{{ copy_03 }}</p>
             </section>
-            <section class="mail" data-aos="flip-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
+            <section v-scroll-reveal.reset="{rotate: {z: 260}, scale: 1.2, delay: 500, duration: 800, distance: '100px' }">
                 <span class="lg:text-lg sm:text-lg mobile:hidden">👉 </span><a href="mailto:hi@chilinotchilly.com" class="lg:text-lg sm:text-lg mobile:text-xmd underline">hi@chilinotchilly.com</a>
             </section>
-            <img src="../assets/img/chili-team.webp" class="mt-40 mobile:mt-12 w-100" alt="Chili team" data-aos="fade-up" data-aos-duration="1000">
+            <img src="../assets/img/chili-team.webp" class="mt-40 mobile:mt-12 w-100" alt="Chili team" v-scroll-reveal.reset="{ duration: 1200, distance: '500px' }">
         </div>
     </div>
 </template>
