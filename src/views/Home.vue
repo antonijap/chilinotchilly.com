@@ -14,10 +14,10 @@
                 <h3 class="lg:text-lg lg:leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Get in touch</h3>
                 <p class="md:text-md sm:text-xmd leading-normal mb-12">{{ copy_03 }}</p>
             </section>
-            <section v-scroll-reveal.reset="{rotate: {z: 260}, scale: 1.2, delay: 500, duration: 800, distance: '100px' }">
+            <section v-scroll-reveal.reset="{rotate: {z: 260}, scale: 1.2, duration: 800, distance: '100px' }">
                 <span class="lg:text-lg sm:text-lg mobile:hidden">👉 </span><a href="mailto:hi@chilinotchilly.com" class="lg:text-lg sm:text-lg mobile:text-xmd underline">hi@chilinotchilly.com</a>
             </section>
-            <img src="../assets/img/chili-team.webp" class="mt-40 mobile:mt-12 w-100" alt="Chili team" v-scroll-reveal.reset="{ duration: 1200, distance: '500px' }">
+            <img src="../assets/img/chili-team.webp" class="mt-40 mobile:mt-12 w-100" alt="Chili team" v-scroll-reveal.reset="{ duration: 2500, origin: right, distance: '100%' }">
         </div>
     </div>
 </template>
