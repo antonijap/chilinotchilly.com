@@ -17,7 +17,7 @@
             <section class="mail" data-aos="flip-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
                 <span class="lg:text-lg sm:text-lg mobile:hidden">👉 </span><a href="mailto:hi@chilinotchilly.com" class="lg:text-lg sm:text-lg mobile:text-xmd underline">hi@chilinotchilly.com</a>
             </section>
-            <img src="../assets/img/chili-team.png" class="mt-40 mobile:mt-12" alt="Chili team" data-aos="fade-up" data-aos-duration="1000">
+            <img src="../assets/img/chili-team.webp" class="mt-40 mobile:mt-12 w-100" alt="Chili team" data-aos="fade-up" data-aos-duration="1000">
         </div>
     </div>
 </template>
