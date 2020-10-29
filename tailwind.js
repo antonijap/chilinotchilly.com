@@ -11,7 +11,7 @@ module.exports = {
       'danger': '#e3342f',
     },
     colors: {
-      mustard: '#EC9F4C'
+      mustard: '#FFC700'
     },
     fontSize: {
       'xs': '.75rem',
