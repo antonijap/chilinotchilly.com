@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-mustard text-primary overflow-hidden">
+    <div class="text-primary overflow-hidden bg-mustard">
         <img src="../assets/img/chili.svg" alt="Chilinotchilly logo" class="absolute top-0 w-2/4 rotate">
         <div class="container mx-auto md:px-12 mobile:px-6">
             <section class="flex content-center flex-wrap h-screen relative">

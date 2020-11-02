@@ -6,12 +6,13 @@ module.exports = {
   purge: [],
   theme: {
     textColor: {
-      'primary': '#1B2F33',
+      'primary': '#050505',
       'secondary': '#ffed4a',
       'danger': '#e3342f',
+      'chili-green': '#3BB869'
     },
     colors: {
-      mustard: '#FFC700'
+      mustard: '#FAEED6',
     },
     fontSize: {
       'xs': '.75rem',
@@ -22,7 +23,7 @@ module.exports = {
       'md': '2rem',
       'xlg': '3rem',
       'lg': '4rem',
-      'xl': '8rem',
+      'xl': '6rem',
       'xxl': '10rem',
     },
     container: {
