@@ -2,7 +2,7 @@
     <div class="text-primary overflow-hidden bg-mustard">
         <img src="../assets/img/chili.svg" alt="Chilinotchilly logo" class="absolute top-0 w-2/4 rotate">
         <div class="container mx-auto md:px-12 mobile:px-6">
-            <img src="../assets/img/logo.svg" alt="Chilinotchilly logo" class="mt-64 relative">
+            <img src="../assets/img/logo.svg" alt="Chilinotchilly logo" class="mt-64 relative w-64">
             <section class="flex content-center flex-wrap h-screen relative">
                 <h1 class="xl:text-xl lg:text-xl sm:text-lg mobile:text-xlg font-black leading-none mb-12 mobile:mb-4">{{ header }}</h1>
                 <h2 class="md:text-md sm:text-xmd leading-normal">{{ copy_01 }}</h2>
@@ -26,7 +26,7 @@
 									>
 									<input type="hidden" name="contact-form" value="ask-question" />
 									<input v-model="form.email" type="email" name="email" id="email" placeholder="Email" class="appearance-none bg-white rounded w-full py-4 px-4 placeholder:text-gray-500 focus:outline-none focus:bg-white md:text-md sm:text-xmd leading-normal mb-4"></input>
-									<textarea v-model="form.message" @input="ev => form.askPerson = ev.target.value" name="message" id="message" placeholder="Write something nice..." class="h-40 appearance-none bg-white rounded w-full py-4 px-4 placeholder:text-gray-500 focus:outline-none focus:bg-white md:text-md sm:text-xmd leading-normal mb-4"></textarea>
+									<textarea v-model="form.message" name="message" id="message" placeholder="Write something nice..." class="h-40 appearance-none bg-white rounded w-full py-4 px-4 placeholder:text-gray-500 focus:outline-none focus:bg-white md:text-md sm:text-xmd leading-normal mb-4"></textarea>
 									<button class="text-primary px-4 py-6 rounded w-full border-4 border-primary md:text-md sm:text-xmd leading-normal hover:border-green-600 hover:text-white hover:bg-green-600">Submit</button>
 								</form>
             </section>
