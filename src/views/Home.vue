@@ -24,10 +24,10 @@
 									data-netlify-honeypot="bot-field"
 									@submit.prevent="handleSubmit"
 									>
-									<input type="hidden" name="QAForm" value="ask-question" />
-									<input type="email" name="email" id="email" placeholder="Email" class="appearance-none bg-white rounded w-full py-4 px-4 placeholder:text-gray-500 focus:outline-none focus:bg-white md:text-md sm:text-xmd leading-normal mb-4"></input>
-									<textarea @input="ev => form.askPerson = ev.target.value" name="message" id="message" placeholder="Write something nice..." class="h-40 appearance-none bg-white rounded w-full py-4 px-4 placeholder:text-gray-500 focus:outline-none focus:bg-white md:text-md sm:text-xmd leading-normal mb-4"></textarea>
-									<button class="text-primary px-4 py-6 rounded w-full border-4 border-primary md:text-md sm:text-xmd leading-normal">Submit</button>
+									<input type="hidden" name="contact-form" value="ask-question" />
+									<input v-model="form.email" type="email" name="email" id="email" placeholder="Email" class="appearance-none bg-white rounded w-full py-4 px-4 placeholder:text-gray-500 focus:outline-none focus:bg-white md:text-md sm:text-xmd leading-normal mb-4"></input>
+									<textarea v-model="form.message" @input="ev => form.askPerson = ev.target.value" name="message" id="message" placeholder="Write something nice..." class="h-40 appearance-none bg-white rounded w-full py-4 px-4 placeholder:text-gray-500 focus:outline-none focus:bg-white md:text-md sm:text-xmd leading-normal mb-4"></textarea>
+									<button class="text-primary px-4 py-6 rounded w-full border-4 border-primary md:text-md sm:text-xmd leading-normal hover:border-green-600 hover:text-white hover:bg-green-600">Submit</button>
 								</form>
             </section>
               <section class="mt-64 mobile:mt-32 relative" v-scroll-reveal="{ scale: 1.2, delay: 250, duration: 800, distance: '100px', interval: 600 }">
@@ -61,7 +61,8 @@ export default {
         posts: null,
 				linkResolver: this.$prismic.linkResolver,
 				form: {
-        	message: ""
+        	message: "",
+        	email: ""
       	}
     }
   },
@@ -119,6 +120,9 @@ export default {
 <style lang="scss">
 .rotate {
   animation: rotation 60s infinite linear;
+}
+button {
+	transition: all 200ms ease-in;
 }
 @keyframes rotation {
   from {
