@@ -30,18 +30,6 @@
 									<button class="text-primary px-4 py-6 rounded w-full border-4 border-primary md:text-md sm:text-xmd leading-normal hover:border-green-600 hover:text-white hover:bg-green-600">Submit</button>
 								</form>
             </section>
-              <section class="mt-64 mobile:mt-32 relative" v-scroll-reveal="{ scale: 1.2, delay: 250, duration: 800, distance: '100px', interval: 600 }">
-                  <h3 class="lg:text-lg lg:leading-none mb-40 mobile:mb-4 sm:text-lg mobile:text-md">Latest from <a href="/blog">blog</a></h3>
-                  <div class="grid grid-cols-2">
-                    <div v-for="post in posts" :key="post.id" v-bind:post="post">
-                      <router-link :to="linkResolver(post)">
-                        <prismic-image :field="post.data.post_image"/>
-                        <prismic-rich-text :field="post.data.post_title" class="text-primary mt-4 lg:text-md leading-small mobile:mb-4 sm:text-lg mobile:text-md"/>
-                        <!-- <div>{{ post.data.date | moment("from", "now") }}</div> -->
-                    </router-link>
-                  	</div>          
-              	</div>
-            	</section>
             <img src="../assets/img/chili-team.webp" class="mt-40 mobile:mt-12 w-100" alt="Chili team" v-scroll-reveal="{ duration: 2000, origin: 'left', distance: '150%', opacity: null, interval: 600 }">
         </div>
     </div>
