@@ -11,6 +11,7 @@ module.exports = {
       './src/**/*.vue'
   ],
   theme: {
+    
     fontFamily: {
       'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       'body': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
@@ -40,13 +41,18 @@ module.exports = {
       colors: {
         mustard: '#FAEED6',
         primary: '#050505',
+        'chili-red': '#FA2B04',
+        'chili-green': '#3BB869'
       },
       textColor: {
         'primary': '#050505',
         'secondary': '#ffed4a',
-        'danger': '#e3342f',
+        'chili-red': '#FA2B04',
         'chili-green': '#3BB869'
       },
+      padding: {
+        sm: '0.15em',
+      }
     },
   },
   variants: {}

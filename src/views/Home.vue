@@ -6,28 +6,40 @@
             <section class="flex content-center flex-wrap h-screen relative">
                 <h1 class="xl:text-xl lg:text-xl sm:text-lg mobile:text-xlg font-black leading-none mb-12 mobile:mb-4">{{ header }}</h1>
                 <h2 class="md:text-md sm:text-xmd leading-normal">{{ copy_01 }}</h2>
+								<a class="py-6 px-6 bg-primary text-white rounded-lg text-xmd mt-10 rainbow rainbow-5 hover:text-primary" href="#contact">Get your website</a>
             </section>
             <section class="relative" v-scroll-reveal="{ scale: 1.2, delay: 250, duration: 800, distance: '100px' }">
                 <h3 class="lg:text-lg leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Our workflow</h3>
                 <p class="md:text-md sm:text-xmd leading-normal">{{ copy_02 }}</p>
             </section>
-            <section class="mt-64 mobile:mt-32 relative" v-scroll-reveal="{ scale: 1.2, delay: 250, duration: 800, distance: '100px', interval: 600 }">
+            <section class="pt-64 mobile:mt-32 relative" v-scroll-reveal="{ scale: 1.2, delay: 250, duration: 800, distance: '100px', interval: 600 }" id="contact">
                 <h3 class="lg:text-lg lg:leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Get in touch</h3>
                 <p class="md:text-md sm:text-xmd leading-normal mb-12">{{ copy_03 }}</p>
             </section>
-            <section v-scroll-reveal="{rotate: {z: 260}, scale: 1.2, duration: 800, distance: '100px', interval: 600 }">
+            <section v-scroll-reveal="{rotate: {z: 260}, scale: 1.2, duration: 800, distance: '100px', interval: 600 }" >
                 <!-- <span class="lg:text-lg sm:text-lg mobile:hidden">👉 </span><a href="mailto:hi@chilinotchilly.com" class="lg:text-lg sm:text-lg mobile:text-xmd underline">hi@chilinotchilly.com</a> -->
 								<form
 									name="ask-question"
 									method="post"
 									data-netlify="true"
 									data-netlify-honeypot="bot-field"
-									@submit.prevent="handleSubmit"
+									@submit.prevent="checkForm"
 									>
 									<input type="hidden" name="contact-form" value="ask-question" />
-									<input v-model="form.email" type="email" name="email" id="email" placeholder="Email" class="appearance-none bg-white rounded w-full py-4 px-4 placeholder:text-gray-500 focus:outline-none focus:bg-white md:text-md sm:text-xmd leading-normal mb-4"></input>
-									<textarea v-model="form.message" name="message" id="message" placeholder="Write something nice..." class="h-40 appearance-none bg-white rounded w-full py-4 px-4 placeholder:text-gray-500 focus:outline-none focus:bg-white md:text-md sm:text-xmd leading-normal mb-4"></textarea>
-									<button class="text-primary px-4 py-6 rounded w-full border-4 border-primary md:text-md sm:text-xmd leading-normal hover:border-green-600 hover:text-white hover:bg-green-600">Submit</button>
+
+									<input v-model="form.email" type="email" name="email" id="email" placeholder="Email" class="appearance-none bg-white rounded w-full py-4 px-4 placeholder:text-gray-500 focus:outline-none focus:bg-white md:text-md sm:text-xmd leading-normal mb-2" />
+									
+									<div v-if="form.emailError != null" class="bg-red-100 text-chili-red px-4 py-3 rounded relative mb-6" role="alert">
+										<strong class="font-bold">{{ form.emailError }}</strong>
+									</div>
+
+									<textarea v-model="form.message" name="message" id="message" placeholder="Write something nice..." class="h-40 appearance-none bg-white rounded w-full py-4 px-4 placeholder:text-gray-500 focus:outline-none focus:bg-white md:text-md sm:text-xmd leading-normal mb-1"></textarea>
+
+									<div v-if="form.messageError != null" class="bg-red-100 text-chili-red px-4 py-3 rounded relative mb-6" role="alert">
+										<strong class="font-bold">{{ form.messageError }}</strong>
+									</div>
+
+									<button class="focus:outline-none text-white px-4 py-6 rounded w-full bg-primary md:text-md sm:text-xmd hover:text-white hover:bg-chili-green">Submit</button>
 								</form>
             </section>
             <img src="../assets/img/chili-team.webp" class="mt-40 mobile:mt-12 w-100" alt="Chili team" v-scroll-reveal="{ duration: 2000, origin: 'left', distance: '150%', opacity: null, interval: 600 }">
@@ -50,7 +62,9 @@ export default {
 				linkResolver: this.$prismic.linkResolver,
 				form: {
         	message: "",
-        	email: ""
+					email: "",
+					messageError: null,
+					emailError: null
       	}
     }
   },
@@ -78,7 +92,7 @@ export default {
         )
         .join("&");
     },
-    handleSubmit () {
+    handleSubmit() {
       const axiosConfig = {
         header: { "Content-Type": "application/x-www-form-urlencoded" }
       };
@@ -96,6 +110,21 @@ export default {
       .catch(() => {
         this.$router.push('404')
       })
+		},
+		checkForm() {
+      if (this.form.email && this.form.message) {
+        this.handleSubmit()
+      }
+
+      this.form.emailError = null;
+      this.form.messageError = null;
+
+      if (!this.form.email) {
+        this.form.emailError = "Uh oh, email is mandatory"
+      }
+      if (!this.form.message) {
+        this.form.messageError = "No empty messages, write us something"
+      }
     }
   },
   created () {
@@ -106,9 +135,58 @@ export default {
 </script>
 
 <style lang="scss">
+html {
+  scroll-behavior: smooth;
+}
 .rotate {
   animation: rotation 60s infinite linear;
 }
+.a{color: #E7484F}
+.b{color: #F68B1D}
+.c{color: #FCED00}
+.d{color: #009E4F}
+.e{color: #00AAC3}
+.f{color:  #732982}
+.rainbow{
+  background-color: #343A40;
+  border-radius: 4px;  
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+.rainbow{
+  background-color: #343A40;
+  border-radius: 4px;  
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+.rainbow-5:hover{
+	 background-image:     
+	 linear-gradient(
+      to right, 
+      #E7484F,
+      #E7484F 16.65%,
+      #F68B1D 16.65%,
+      #F68B1D 33.3%,
+      #FCED00 33.3%,
+      #FCED00 49.95%,
+      #009E4F 49.95%,
+      #009E4F 66.6%,
+      #00AAC3 66.6%,
+      #00AAC3 83.25%,
+      #732982 83.25%,
+      #732982 100%,
+      #E7484F 100%
+    );
+  animation:slidebg 2s linear infinite;
+}
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
+}
+
 button {
 	transition: all 200ms ease-in;
 }
