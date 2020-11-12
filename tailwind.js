@@ -6,20 +6,14 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'),
   ],
-  purge: [],
+  purge: [
+      './public/**/*.html',
+      './src/**/*.vue'
+  ],
   theme: {
     fontFamily: {
       'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       'body': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-    },
-    textColor: {
-      'primary': '#050505',
-      'secondary': '#ffed4a',
-      'danger': '#e3342f',
-      'chili-green': '#3BB869'
-    },
-    colors: {
-      mustard: '#FAEED6',
     },
     fontSize: {
       'xs': '.75rem',
@@ -42,7 +36,17 @@ module.exports = {
       },
       screens: {
         'mobile': [ {'max': '640px'} ]
-      }
+      },
+      colors: {
+        mustard: '#FAEED6',
+        primary: '#050505',
+      },
+      textColor: {
+        'primary': '#050505',
+        'secondary': '#ffed4a',
+        'danger': '#e3342f',
+        'chili-green': '#3BB869'
+      },
     },
   },
   variants: {}

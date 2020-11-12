@@ -12,6 +12,5 @@ export default {
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-  @import "./assets/css/resetr.css";
-  @import "./assets/css/tailwind.css";
+  /* @import "./assets/css/resetr.css"; */
 </style>

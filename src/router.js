@@ -4,6 +4,8 @@ import NotFound from './views/NotFound.vue'
 import Home from './views/Home.vue'
 import Post from './views/Post.vue'
 import Blog from './views/Blog.vue'
+import SubmissionSuccess from './views/FormSuccess.vue'
+import SubmissionFail from './views/FormFail.vue'
 
 Vue.use(Router)
 
@@ -23,6 +25,16 @@ export default new Router({
       path: '/blog/:uid',
       name: 'post',
       component: Post
+    },
+    {
+      path: '/thanks',
+      name: 'success',
+      component: SubmissionSuccess
+    },
+    {
+      path: '/404',
+      name: 'fail',
+      component: SubmissionFail
     },
     {
       path: '/not-found',
