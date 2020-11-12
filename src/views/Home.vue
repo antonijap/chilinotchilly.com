@@ -44,14 +44,19 @@
             </section>
             <img src="../assets/img/chili-team.webp" class="mt-40 mobile:mt-12 w-100" alt="Chili team" v-scroll-reveal="{ duration: 2000, origin: 'left', distance: '150%', opacity: null, interval: 600 }">
         </div>
+				<Footer />
     </div>
 </template>
 
 <script>
 import axios from 'axios';
+import Footer from './Footer';
 
 export default {
-  name: 'Home',
+	name: 'Home',
+	components: {
+    Footer
+	},
   data () {
     return {
         header: null,
@@ -179,7 +184,7 @@ html {
       #732982 100%,
       #E7484F 100%
     );
-  animation:slidebg 2s linear infinite;
+  animation:slidebg 6s linear infinite;
 }
 @keyframes slidebg {
   to {

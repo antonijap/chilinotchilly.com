@@ -1,20 +1,20 @@
 <template>
-    <div class="text-primary bg-mustard md:pb-64 mobile:pb-24">
+    <div class="text-primary bg-mustard">
         <div class="w-full border-b-2 border-primary p-4 mb-48">
             <router-link to="/">
-            <button class="flex items-center flex-initial text-primary py-2 px-4 wiggle focus:outline-none">
+            <button class="flex items-center flex-initial text-primary py-2 px-4 wiggle outline-none focus:outline-none">
                 <img src="@/assets/img/arrow-left.svg" alt="Arrow left">
                 <span class="font-bold ml-6">Back to Chili</span>
             </button>
          </router-link>
         </div>
-        <div class="container mx-auto md:px-12 mobile:px-4 md:w-prose mobile:w-screen max-w-none">
+        <div class="container mx-auto">
             <h1 class="lg:text-lg leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Blog</h1>
             <h2 class="md:text-md sm:text-xmd leading-normal">Interested in agency life, best practiced and chili stuff? You are on the right place.</h2>
             <div class="grid grid-cols-2 mt-48 gap-24 row-gap-24">
                 <div v-for="post in posts" :key="post.id" v-bind:post="post" class="hover:text-chili-red">
                     <router-link :to="linkResolver(post)">
-                        <prismic-image :field="post.data.post_image"/>
+                        <prismic-image :field="post.data.post_image" class="rounded"/>
                         <prismic-rich-text :field="post.data.post_title" class="mt-4 lg:text-xmd leading-small mobile:mb-4 sm:text-lg mobile:text-md pb-2"/>
                         <div>{{ post.data.date | moment("from", "now") }} by <span class="italic">{{ $prismic.richTextAsPlain(post.data.author) }}</span></div>
                     </router-link>
@@ -30,12 +30,18 @@
 								class="mt-24"
             />
         </div>
+				<Footer />
     </div>
 </template>
 
 <script>
+import Footer from './Footer';
+
 export default {
-  name: 'Post',
+	name: 'Post',
+	components: {
+    Footer
+	},
   data () {
     return {
         posts: null,
