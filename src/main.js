@@ -8,6 +8,7 @@ import VueScrollReveal from 'vue-scroll-reveal';
 
 Vue.config.productionTip = false
 Vue.use(VueScrollReveal);
+Vue.use(require('vue-moment'));
 
 Vue.use(PrismicVue, {
   endpoint: "https://chilinotchilly.cdn.prismic.io/api/v2",

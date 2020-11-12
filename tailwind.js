@@ -3,8 +3,15 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
   purge: [],
   theme: {
+    fontFamily: {
+      'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+      'body': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+    },
     textColor: {
       'primary': '#050505',
       'secondary': '#ffed4a',
@@ -30,16 +37,13 @@ module.exports = {
       center: true,
     },
     extend: {
-      fontFamily: {
-        'sans': ['Inter', 'sans-serif'],
-        'display': ['Inter', 'sans-serif'],
-        'body': ['Inter', 'sans-serif'],
+      width: {
+        'prose': '1140px',
       },
       screens: {
         'mobile': [ {'max': '640px'} ]
       }
     },
   },
-  variants: {},
-  plugins: [],
+  variants: {}
 }
