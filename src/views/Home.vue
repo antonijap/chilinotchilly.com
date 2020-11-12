@@ -24,7 +24,7 @@
 									data-netlify-honeypot="bot-field"
 									>
 									<input type="hidden" name="QAForm" value="ask-question" />
-									<textarea name="message" id="message" placeholder="Write something nice..." class="w-full bf-white rounded"></textarea>
+									<textarea name="message" id="message" placeholder="Write something nice..." class="appearance-none w-full bg-white rounded"></textarea>
 									<button>Submit</button>
 								</form>
             </section>
