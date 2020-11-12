@@ -8,6 +8,8 @@ import VueScrollReveal from 'vue-scroll-reveal';
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VueTailwind from 'vue-tailwind'
+import Meta from 'vue-meta';
+
 
 import '@/assets/css/tailwind.css';
 
@@ -15,6 +17,7 @@ Vue.config.productionTip = false
 Vue.use(VueScrollReveal);
 Vue.use(require('vue-moment'));
 Vue.use(VueAxios, axios)
+Vue.use(Meta);
 
 const settings = {
   // Single tag elements

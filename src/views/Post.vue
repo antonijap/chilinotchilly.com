@@ -28,11 +28,11 @@ export default {
     return { 
       title: fields.title,
       meta: [
-      { name: 'description', content: fields.content},
-      { property: 'og:title', content: fields.title},
-      { property: 'og:site_name', content: 'Chilinotchily'},
-      {property: 'og:type', content: 'post'},    
-      {name: 'robots', content: 'index,follow'} 
+        { name: 'description', content: fields.content},
+        { property: 'og:title', content: fields.title},
+        { property: 'og:site_name', content: 'Chilinotchily'},
+        { property: 'og:type', content: 'post'},    
+        { name: 'robots', content: 'index,follow'} 
       ]
     }
   },
