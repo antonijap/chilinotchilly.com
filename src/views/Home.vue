@@ -16,8 +16,8 @@
                 <p class="md:text-md sm:text-xmd leading-normal mb-12">{{ copy_03 }}</p>
             </section>
             <section v-scroll-reveal="{rotate: {z: 260}, scale: 1.2, duration: 800, distance: '100px', interval: 600 }">
-                <!-- <span class="lg:text-lg sm:text-lg mobile:hidden">👉 </span><a href="mailto:hi@chilinotchilly.com" class="lg:text-lg sm:text-lg mobile:text-xmd underline">hi@chilinotchilly.com</a> -->
-								<form
+                <span class="lg:text-lg sm:text-lg mobile:hidden">👉 </span><a href="mailto:hi@chilinotchilly.com" class="lg:text-lg sm:text-lg mobile:text-xmd underline">hi@chilinotchilly.com</a>
+								<!-- <form
 									name="ask-question"
 									method="post"
 									data-netlify="true"
@@ -26,7 +26,7 @@
 									<input type="hidden" name="QAForm" value="ask-question" />
 									<textarea name="message" id="message" placeholder="Write something nice..." class="appearance-none w-full bg-white rounded"></textarea>
 									<button>Submit</button>
-								</form>
+								</form> -->
             </section>
             <div v-if="posts.length > 1" >
               <section class="mt-64 mobile:mt-32 relative" v-scroll-reveal="{ scale: 1.2, delay: 250, duration: 800, distance: '100px', interval: 600 }">
