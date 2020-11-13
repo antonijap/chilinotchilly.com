@@ -1,6 +1,6 @@
 <template>
     <div class="text-primary bg-mustard">
-        <div class="w-full border-b-2 border-primary p-4 mb-48">
+        <div class="w-full border-b-2 border-primary p-4 md:mb-24 mobile:mb-16">
             <router-link to="/">
             <button class="flex items-center flex-initial text-primary py-2 px-4 wiggle outline-none focus:outline-none">
                 <img src="@/assets/img/arrow-left.svg" alt="Arrow left">
@@ -8,14 +8,14 @@
             </button>
          </router-link>
         </div>
-        <div class="container mx-auto">
+        <div class="container mx-auto md:px-12 mobile:px-6">
             <h1 class="lg:text-lg leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Blog</h1>
             <h2 class="md:text-md sm:text-xmd leading-normal">Interested in agency life, best practiced and chili stuff? You are on the right place.</h2>
-            <div class="grid grid-cols-2 mt-48 gap-24 row-gap-24">
+            <div class="grid md:grid-cols-2 mobile:grid-cols-1 md:mt-24 mobile:mt-16 md:gap-8 mobile:gap-16 md:row-gap-24">
                 <div v-for="post in posts" :key="post.id" v-bind:post="post" class="hover:text-chili-red">
                     <router-link :to="linkResolver(post)">
                         <prismic-image :field="post.data.post_image" class="rounded"/>
-                        <prismic-rich-text :field="post.data.post_title" class="mt-4 lg:text-xmd leading-small mobile:mb-4 sm:text-lg mobile:text-md pb-2"/>
+                        <prismic-rich-text :field="post.data.post_title" class="mt-4 lg:text-xmd leading-small mobile:mb-0 sm:text-xmd pb-2"/>
                         <div>{{ post.data.date | moment("from", "now") }} by <span class="italic">{{ $prismic.richTextAsPlain(post.data.author) }}</span></div>
                     </router-link>
                 </div>

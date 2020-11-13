@@ -2,17 +2,17 @@
     <div class="text-primary overflow-hidden bg-mustard">
         <img src="../assets/img/chili.svg" alt="Chilinotchilly logo" class="absolute top-0 w-2/4 rotate">
         <div class="container mx-auto md:px-12 mobile:px-6">
-            <img src="../assets/img/logo.svg" alt="Chilinotchilly logo" class="mt-64 relative w-64">
+            <img src="../assets/img/logo.svg" alt="Chilinotchilly logo" class="md:mt-64 mobile:mt-24 relative md:w-64">
             <section class="flex content-center flex-wrap h-screen relative">
-                <h1 class="xl:text-xl lg:text-xl sm:text-lg mobile:text-xlg font-black leading-none mb-12 mobile:mb-4">{{ header }}</h1>
+                <h1 class="xl:text-xl lg:text-xl sm:text-lg mobile:text-md font-black leading-none mb-12 mobile:mb-4">{{ header }}</h1>
                 <h2 class="md:text-md sm:text-xmd leading-normal">{{ copy_01 }}</h2>
-								<a class="py-6 px-6 bg-primary text-white rounded-lg text-xmd mt-10 rainbow rainbow-5 hover:text-primary" href="#contact">Get your website</a>
+								<a class="py-6 px-6 bg-primary text-white rounded-lg md:text-xmd mt-10 rainbow rainbow-5 hover:text-primary" href="#contact">Get your website</a>
             </section>
-            <section class="relative" v-scroll-reveal="{ scale: 1.2, delay: 250, duration: 800, distance: '100px' }">
+            <section class="relative md:pt-40" v-scroll-reveal="{ scale: 1.2, delay: 250, duration: 800, distance: '100px' }">
                 <h3 class="lg:text-lg leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Our workflow</h3>
                 <p class="md:text-md sm:text-xmd leading-normal">{{ copy_02 }}</p>
             </section>
-            <section class="pt-64 mobile:mt-32 relative" v-scroll-reveal="{ scale: 1.2, delay: 250, duration: 800, distance: '100px', interval: 600 }" id="contact">
+            <section class="md:pt-40 mobile:mt-24 relative" v-scroll-reveal="{ scale: 1.2, delay: 250, duration: 800, distance: '100px', interval: 600 }" id="contact">
                 <h3 class="lg:text-lg lg:leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Get in touch</h3>
                 <p class="md:text-md sm:text-xmd leading-normal mb-12">{{ copy_03 }}</p>
             </section>
