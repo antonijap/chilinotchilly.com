@@ -2,9 +2,9 @@
     <div class="text-primary overflow-hidden bg-mustard">
         <img src="../assets/img/chili.svg" alt="Chilinotchilly logo" class="absolute top-0 w-2/4 rotate">
         <div class="container mx-auto md:px-12 mobile:px-6">
-            <img src="../assets/img/logo.svg" alt="Chilinotchilly logo" class="md:mt-64 mobile:mt-24 relative md:w-64">
+            <img src="../assets/img/logo.svg" alt="Chilinotchilly logo" class="md:mt-24 mobile:mt-24 absolute md:w-32">
             <section class="flex content-center flex-wrap h-screen relative">
-                <h1 class="xl:text-xl lg:text-xl sm:text-lg mobile:text-md font-black leading-none mb-12 mobile:mb-4">{{ header }}</h1>
+                <h1 class="mobile:mt-32 xl:text-xl lg:text-xl sm:text-lg mobile:text-lg font-black leading-none mb-12 mobile:mb-4">{{ header }}</h1>
                 <h2 class="md:text-md sm:text-xmd leading-normal">{{ copy_01 }}</h2>
 								<a class="py-6 px-6 bg-primary text-white rounded-lg md:text-xmd mt-10 rainbow rainbow-5 hover:text-primary" href="#contact">Get your website</a>
             </section>
