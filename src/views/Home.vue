@@ -1,14 +1,14 @@
 <template>
-    <div class="text-primary overflow-hidden bg-mustard">
-        <img src="../assets/img/chili.svg" alt="Chilinotchilly logo" class="absolute top-0 w-2/4 rotate">
+    <div class="text-primary overflow-hidden bg-mustard" v-if="copy_01">
         <div class="container mx-auto md:px-12 mobile:px-6">
-            <img src="../assets/img/logo.svg" alt="Chilinotchilly logo" class="md:mt-24 mobile:mt-24 absolute md:w-32">
-            <section class="flex content-center flex-wrap h-screen relative">
+        <img src="../assets/img/chili.svg" alt="Chilinotchilly logo" class="absolute top-0 w-2/4 rotate">
+            <section class="flex content-center flex-wrap xl:mt-40 relative">
+                <img src="../assets/img/logo.svg" alt="Chilinotchilly logo" class="md:mt-24 mobile:mt-24 md:w-32 lg:mb-48">
                 <h1 class="mobile:mt-32 xl:text-xl lg:text-xl sm:text-lg mobile:text-md font-black leading-none mb-12 mobile:mb-4">{{ header }}</h1>
                 <h2 class="md:text-md sm:text-xmd leading-normal">{{ copy_01 }}</h2>
 								<a class="py-6 px-6 bg-primary text-white rounded-lg md:text-xmd mt-10 rainbow rainbow-5 hover:text-primary" href="#contact">Get your website</a>
             </section>
-            <section class="relative md:pt-40" v-scroll-reveal="{ scale: 1.2, delay: 250, duration: 800, distance: '100px' }">
+            <section class="relative md:pt-40 mobile:mt-24" v-scroll-reveal="{ scale: 1.2, delay: 250, duration: 800, distance: '100px' }">
                 <h3 class="lg:text-lg leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Our workflow</h3>
                 <p class="md:text-md sm:text-xmd leading-normal">{{ copy_02 }}</p>
             </section>
