@@ -1,5 +1,8 @@
 <template>
-    <div class="text-primary overflow-hidden bg-mustard" v-if="copy_01">
+    <div v-if="!copy_01" class="container flex content-center justify-center h-screen">
+      <img  src="../assets/img/spinner.svg" alt="spinner">
+    </div>
+    <div v-else class="text-primary overflow-hidden bg-mustard">
         <div class="container mx-auto md:px-12 mobile:px-6">
         <img src="../assets/img/chili.svg" alt="Chilinotchilly logo" class="absolute left-0 top-0 w-2/4 rotate">
             <section class="flex content-center flex-wrap xl:mt-40 relative">
