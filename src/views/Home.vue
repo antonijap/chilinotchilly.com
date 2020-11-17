@@ -15,12 +15,11 @@
                 <h3 class="lg:text-lg leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Our workflow</h3>
                 <p class="md:text-md sm:text-xmd leading-normal">{{ copy_02 }}</p>
             </section>
-            <section class="md:pt-40 mobile:mt-24 relative" v-scroll-reveal="{ scale: 1.2, delay: 250, duration: 800, distance: '100px', interval: 600 }" id="contact">
+            <section class="md:pt-40 mobile:mt-24 relative" v-scroll-reveal="{ scale: 1.2, delay: 450, duration: 800, distance: '100px', interval: 600 }" id="contact">
                 <h3 class="lg:text-lg lg:leading-none mb-12 mobile:mb-4 sm:text-lg mobile:text-md">Get in touch</h3>
                 <p class="md:text-md sm:text-xmd leading-normal mb-12">{{ copy_03 }}</p>
             </section>
-            <section v-scroll-reveal="{rotate: {z: 260}, scale: 1.2, duration: 800, distance: '100px', interval: 600 }" >
-                <!-- <span class="lg:text-lg sm:text-lg mobile:hidden">👉 </span><a href="mailto:hi@chilinotchilly.com" class="lg:text-lg sm:text-lg mobile:text-xmd underline">hi@chilinotchilly.com</a> -->
+            <section v-scroll-reveal="{duration: 800, opacity: 0 }" >
 								<form
 									name="ask-question"
 									method="post"
@@ -45,9 +44,10 @@
 									<button class="focus:outline-none text-white px-4 py-6 rounded w-full bg-primary md:text-md sm:text-xmd hover:text-white hover:bg-chili-green">Submit</button>
 								</form>
             </section>
-            <img src="../assets/img/chili-team.webp" class="mt-40 mobile:mt-12 w-100" alt="Chili team" v-scroll-reveal="{ duration: 2000, origin: 'left', distance: '150%', opacity: null, interval: 600 }">
+            <Footer />
+            <img src="../assets/img/chili-team.webp" class="mobile:mt-12 w-100" alt="Chili team" v-scroll-reveal="{ duration: 1000, origin: 'bottom', distance: '500px', easing: 'cubic-bezier(0.5, 0, 0, 1)' }">
         </div>
-				<Footer />
+				
     </div>
 </template>
 
